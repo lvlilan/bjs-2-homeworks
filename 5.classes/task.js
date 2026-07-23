@@ -131,3 +131,32 @@ class Student {
     return totalAverage / subjects.length;
   }
 }
+
+const student = new Student("Олег Никифоров");
+
+student.addMark(5, "химия");
+student.addMark(5, "химия");
+student.addMark(5, "физика");
+student.addMark(4, "физика");
+student.addMark(6, "физика");
+student.addMark(1, "математика");
+
+console.log(student.getAverageBySubject("физика"));
+console.log(student.getAverageBySubject("биология"));
+console.log(student.getAverage());
+
+console.log(student.marks);
+
+const student2 = new Student("Анна Иванова");
+console.log(student2.getAverage());
+
+student2.addMark(4, "математика");
+student2.addMark(5, "математика");
+student2.addMark(3, "физика");
+console.log(student2.getAverageBySubject("математика"));
+console.log(student2.getAverage());
+
+student2.addMark(5, "информатика");
+student2.addMark(10, "информатика");
+student2.addMark(0, "информатика");
+console.log(student2.getAverageBySubject("информатика"));
